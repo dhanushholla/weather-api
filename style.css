@@ -1,0 +1,66 @@
+#form{
+    background-color:cadetblue ;
+    padding: 5px;
+    left: 20px;
+    top: 20px;
+    width: fit-content;
+}
+table,td,tr{
+   padding:5px;
+   margin:10px;
+   background-color: black;
+   color:white;
+   font-family: Google Sans,arial,sans-serif;;
+}
+.table1style{
+    overflow-y:scroll;
+    width:34%;
+}
+
+
+
+
+
+
+
+
+
+/*SCRAPS:
+
+/* .wrapper-style{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    flex-wrap: wrap;
+    
+} */
+/* .temp-span{
+    min-width: 100px;
+    border:3px black solid;
+    background-color: burlywood;
+    margin:5px;
+}
+.windspeed-span{
+    min-width: 100px;
+    border:3px black solid;
+    margin:5px;
+    background-color: burlywood;
+}
+.cityname-span{
+    min-width: 100px;
+    border:3px black solid;
+    margin:5px;
+    background-color: burlywood;
+}
+.weatherdesc-span{
+    min-width:  100px;
+    border:3px black solid;
+    background-color: burlywood;
+    margin:5px;
+}
+.precipitation-span{
+   min-width: 100px;
+    border:3px black solid;
+    background-color: burlywood;
+    margin:5px;
+} */
