@@ -39,7 +39,7 @@ function assignLatLon(event){
     }
     else
     {
-        console.log(("NA option selected"));
+        //console.log(("NA option selected"));
     }
     event.preventDefault();
 }
