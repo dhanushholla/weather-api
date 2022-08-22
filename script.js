@@ -12,30 +12,21 @@ function assignLatLon(event){
         lat=80.27
         lon=13.08
         changeUrl(lat,lon)
-        if(getCurrentWeather(currentWeatherURL,options))
-        {
-             getDaysWeather(daysWeatherURL,opt);
-        }
+        getCurrentWeather(currentWeatherURL,options)   
     }
     else if(obtval=="bangalore")
     {
         lat=77.59
         lon=12.97
         changeUrl(lat,lon)
-       if(getCurrentWeather(currentWeatherURL,options))
-       {
-             getDaysWeather(daysWeatherURL,opt);
-       }
-    }
+       getCurrentWeather(currentWeatherURL,options)
+   }
     else if(obtval=="mumbai")
     {
         lat=72.87 
         lon=19.07
         changeUrl(lat,lon)
-        if(getCurrentWeather(currentWeatherURL,options))
-        {
-            getDaysWeather(daysWeatherURL,opt);
-        }
+        getCurrentWeather(currentWeatherURL,options)
     }
     else
     {
@@ -91,6 +82,7 @@ var getCurrentWeather= async(currentWeatherURL,options)=>
     var result= await response.json();
     console.log(result);
     currentWeatherDisplay(result);
+    getDaysWeather(daysWeatherURL,opt);
 }
 var getDaysWeather= async(daysWeatherURL,options)=>
 {
@@ -319,3 +311,18 @@ function DaysWeatherDisplay(result)
 //     wrapper.classList.add("wrapper-style");
 //     body.appendChild(wrapper)
 // }
+
+
+// date to day for slidewrapper code
+/*table1SubData.appendChild(()=>{
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const d = new Date();
+    if(day<6)
+    {
+        var day = d.getDay()+1;
+        table1SubData.innerText=weekday[day];
+    }
+    else{
+        day=0;
+    }
+})*/
