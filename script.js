@@ -14,7 +14,7 @@ function assignLatLon(event){
         changeUrl(lat,lon)
         if(getCurrentWeather(currentWeatherURL,options))
         {
-        getDaysWeather(daysWeatherURL,opt);
+             getDaysWeather(daysWeatherURL,opt);
         }
     }
     else if(obtval=="bangalore")
@@ -24,7 +24,7 @@ function assignLatLon(event){
         changeUrl(lat,lon)
        if(getCurrentWeather(currentWeatherURL,options))
        {
-        getDaysWeather(daysWeatherURL,opt);
+             getDaysWeather(daysWeatherURL,opt);
        }
     }
     else if(obtval=="mumbai")
@@ -34,7 +34,7 @@ function assignLatLon(event){
         changeUrl(lat,lon)
         if(getCurrentWeather(currentWeatherURL,options))
         {
-        getDaysWeather(daysWeatherURL,opt);
+            getDaysWeather(daysWeatherURL,opt);
         }
     }
     else
@@ -43,34 +43,44 @@ function assignLatLon(event){
     }
     event.preventDefault();
 }
+
+//m.dhanushholla api account creds
 //fetch creds for current weather call
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '8c7597d4dcmsha7e8b7933474a5dp18084fjsn575a2c6ae84b',
-		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
-	}
-};
-
-//fetch creds for next 16 days weather call
-const opt = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '8c7597d4dcmsha7e8b7933474a5dp18084fjsn575a2c6ae84b',
-		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
-	}
-};
-
-
-
-
 // const options = {
 // 	method: 'GET',
 // 	headers: {
-// 		'X-RapidAPI-Key': '15b9b6512fmsh365ea98e44638c2p169231jsn532f913f8ea3',
+// 		'X-RapidAPI-Key': '8c7597d4dcmsha7e8b7933474a5dp18084fjsn575a2c6ae84b',
 // 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
 // 	}
 // };
+
+// //fetch creds for next 16 days weather call
+// const opt = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '8c7597d4dcmsha7e8b7933474a5dp18084fjsn575a2c6ae84b',
+// 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+// 	}
+// };
+
+//dhanushholla.mdh account creds
+//current weather api cred
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '15b9b6512fmsh365ea98e44638c2p169231jsn532f913f8ea3',
+		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+	}
+};
+
+//16 days weather api creds
+const opt = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '15b9b6512fmsh365ea98e44638c2p169231jsn532f913f8ea3',
+		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+	}
+};
 
 
 //fetch direct call hit from the form value
@@ -151,13 +161,13 @@ function currentWeatherDisplay(result)
         icontd.appendChild(image);
 
     }
-    else if(result.data[0].weather.description.includes("fog"))
+    else if(result.data[0].weather.description.includes("fog")|| result.data[0].weather.description.includes("Haze"))
     {
         var image = document.createElement("img");
         image.src= "images/fog.png";
         icontd.appendChild(image);
     }
-    else if(result.data[0].weather.description.includes("sun"))
+    else if(result.data[0].weather.description.includes("sun")|| result.data[0].weather.description.includes("Clear"))
     {
         var image = document.createElement("img");
         image.src= "images/sunny.png";
@@ -215,13 +225,13 @@ function DaysWeatherDisplay(result)
             table1SubData.appendChild(image);
     
         }
-        else if(element.weather.description.includes("fog"))
+        else if(element.weather.description.includes("fog") || element.weather.description.includes("Haze"))
         {
             var image = document.createElement("img");
             image.src= "images/fog.png";
             table1SubData.appendChild(image);
         }
-        else if(element.weather.description.includes("sun"))
+        else if(element.weather.description.includes("sun") || element.weather.description.includes("Clear"))
         {
             var image = document.createElement("img");
             image.src= "images/sunny.png";
