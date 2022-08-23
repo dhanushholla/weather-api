@@ -17,3 +17,6 @@ Problems:
 
 
 solutions:
+   1)new geolocation/cityname search api was used, min/max temps were obtained
+   2)appropriate API calling done with data populated on corresponding div/span tags
+   3)made site responsive using flex and wrapping configs.
